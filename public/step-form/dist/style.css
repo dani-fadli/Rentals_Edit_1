@@ -1,0 +1,190 @@
+section#rent @font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Merriweather Sans Light'), local('MerriweatherSans-Light'), url(https://fonts.gstatic.com/s/merriweathersans/v10/2-c49IRs1JiJN1FRAMjTN5zd9vgsFH1eYCDE0hM.ttf) format('truetype');
+}
+section#rent @font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Merriweather Sans Bold'), local('MerriweatherSans-Bold'), url(https://fonts.gstatic.com/s/merriweathersans/v10/2-c49IRs1JiJN1FRAMjTN5zd9vgsFH1OZyDE0hM.ttf) format('truetype');
+}/*
+body {
+  background: url(http://farm5.staticflickr.com/4139/4825532997\_7a7cd3d640\_b.jpg);
+  background-size: cover;
+  height: 100%;
+  font-family: 'Merriweather Sans', sans-serif;
+  color: #666;
+}*/
+section#rent #signup {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background: #fff;
+  margin: 80px auto;
+  position: relative;
+  min-height: 300px;
+}
+section#rent #fieldsets {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+section#rent input[type=text],
+input[type=email],
+input[type=password],
+input[type=tel],
+textarea {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 10rem;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  padding: 8px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+section#rent input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=tel]:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid #22918b;
+}
+section#rent input[type=radio] {
+  margin: 6px;
+  display: inline-block;
+}
+section#rent fieldset {
+  border: none;
+  position: absolute;
+  left: -640px;
+  width: 600px;
+  padding: 10px 0;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  opacity: 0;
+}
+section#rent fieldset.current {
+  left: 20px;
+  opacity: 1;
+}
+section#rent fieldset.next {
+  left: 640px;
+}
+section#rent input[type=submit] {
+  display: none;
+  border: none;
+}
+section#rent #section-tabs {
+  font-size: 0.8em;
+  height: 50px;
+  position: relative;
+  margin-top: -50px;
+  margin-bottom: 50px;
+  padding: 0;
+  font-weight: bold;
+  list-style: none;
+  text-transform: uppercase;
+}
+section#rent #section-tabs li {
+  color: #a7a7a7;
+  cursor: not-allowed;
+  border-left: 1px solid #aaa;
+  text-decoration: none;
+  padding: 0 6px;
+  float: left;
+  width: 25%;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: bold;
+  line-height: 30px;
+  background: #ddd;
+  position: relative;
+}
+section#rent #section-tabs li span {
+  color: #bababa;
+}
+section#rent #section-tabs li.active {
+  color: #444;
+  cursor: pointer;
+}
+section#rent #section-tabs li:after {
+  content: "";
+  display: block;
+  margin-left: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+section#rent #section-tabs li.current {
+  opacity: 1;
+  background: #fff;
+  z-index: 999;
+  border-left: none;
+}
+section#rent #section-tabs li.current:after {
+  border: 15px solid transparent;
+  border-left: 15px solid #2cbab2;
+}
+section#rent .error {
+  color: #bf2424;
+  display: block;
+}
+section#rent input.error,
+textarea.error {
+  border-color: #bf2424;
+}
+section#rent input.error:focus,
+textarea.error:focus {
+  border-color: #bf2424;
+}
+section#rent label.error {
+  margin-bottom: 20px;
+}
+section#rent input.valid {
+  color: green;
+}
+section#rent label.valid {
+  position: absolute;
+  right: 20px;
+}
+section#rent input + .valid,
+textarea + .valid {
+  display: none;
+}
+section#rent .valid + .valid {
+  display: inline;
+  position: absolute;
+  right: 10px;
+  margin-top: -36px;
+  color: green;
+}
+section#rent .btn {
+  border: none;
+  padding: 8px;
+  background: #2cbab2;
+  cursor: pointer;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+section#rent .btn:hover {
+  background: #26a19a;
+}

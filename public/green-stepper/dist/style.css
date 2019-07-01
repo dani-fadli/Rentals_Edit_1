@@ -1,0 +1,178 @@
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+/*form styles*/
+#stepper-form {
+	width: 100%;
+	margin: 10px auto;
+	text-align: center;
+	position: relative;
+}
+#stepper-form fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+/*Hide all except first fieldset*/
+#stepper-form fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#stepper-form input, #stepper-form textarea, #stepper-form select{
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+
+#stepper-form .input-title{
+	text-align: left;
+}
+/*buttons*/
+#stepper-form .action-button{
+	width: 100px;
+	background-color: #fec810;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+	transition: box-shadow 0.2s linear;
+	transition: background-color 0.2s linear;
+	transition: border-radius 0.1s linear;
+	transition: box-shadow 0.2s linear;
+}
+
+#stepper-form .action-button:hover{
+	width: 100px;
+	background-color: transparent;
+	font-weight: bold;
+	color: #fec810;
+	border: 0 none;
+	border-radius: 10px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+	transition: background-color 0.2s linear;
+	transition: border-radius 0.1s linear;
+}
+
+#stepper-form .stepper-submit{
+	width: 100px;
+	background-color: #fec810;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+	transition: box-shadow 0.2s linear;
+	transition: background-color 0.2s linear;
+	transition: border-radius 0.1s linear;
+	transition: box-shadow 0.2s linear;
+}
+
+#stepper-form .stepper-submit:hover{
+	width: 100px;
+	background-color: transparent;
+	font-weight: bold;
+	color: #fec810;
+	border: 0 none;
+	border-radius: 10px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+	transition: background-color 0.2s linear;
+	transition: border-radius 0.1s linear;
+}
+
+#stepper-form .action-button:hover, #stepper-form .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #fec810;
+}
+/*headings*/
+.stepper-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.stepper-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+/*stepper-progressbar*/
+#stepper-progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	z-index: -1;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#stepper-progressbar li {
+	list-style-type: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 12px;
+	width: 20%;
+	float: left;
+	position: relative;
+}
+#stepper-progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 40px;
+	line-height: 40px;
+	display: block;
+	font-size: 14pt;
+	color: #333;
+	z-index: 999;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+	transition: background 0.2s linear;
+}
+/*stepper-progressbar connectors*/
+#stepper-progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	display: none	; /*put it behind the numbers*/
+}
+#stepper-progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#stepper-progressbar li.active:before,  #stepper-progressbar li.active:after{
+	background: #fec810;
+	color: white;
+	transition: background 0.2s linear;
+}
+
+
+
